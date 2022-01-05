@@ -32,9 +32,10 @@ void ReadFile(vector<MyTime>& config) {
 					in = stoi(split[i].substr(1));
 				}
 				else if (split[i][0] == 'S') {
-					s = stoi(split[i].substr(1));
 					if (d == 0 || d == s)
-						d = s;
+						d = s = stoi(split[i].substr(1));
+					else
+						s = stoi(split[i].substr(1));
 				}
 			}
 			time = MyTime(hs, ms, he, me, d, in, s);
