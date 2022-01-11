@@ -7,5 +7,9 @@ int main() {
 	ms.shutdownWindow();*/
 	vector<MyTime> config;
 	ReadFile(config);
+	MyTime a;
+	a.Input();
+	config.push_back(a);
+	WriteFile(config);
 	return 0;
 }
